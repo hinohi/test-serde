@@ -1,3 +1,5 @@
+#![feature(test)]
+
 #[macro_use]
 extern crate serde_derive;
 
@@ -8,9 +10,11 @@ extern crate serde_json;
 extern crate serde_pickle;
 extern crate serde_yaml;
 extern crate toml;
+extern crate test;
 
 mod val;
+mod pf;
 
 fn main() {
-    val::run();
+    pf::run();
 }
