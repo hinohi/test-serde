@@ -35,7 +35,7 @@ fn size_test() {
 fn bench_rmp(b: &mut test::Bencher) {
     let mut map = HashMap::new();
     for i in 0..1000 {
-        map.insert([i, i + 1, i + 2, i+ 3 + i + 4 + i + 5], i);
+        map.insert([i, i + 1, i + 2, i+ 3, i + 4, i + 5], i);
     }
     b.iter(move || rmp_serde::to_vec(&map).unwrap());
 }
@@ -44,7 +44,7 @@ fn bench_rmp(b: &mut test::Bencher) {
 fn bench_ron(b: &mut test::Bencher) {
     let mut map = HashMap::new();
     for i in 0..1000 {
-        map.insert([i, i + 1, i + 2, i+ 3 + i + 4 + i + 5], i);
+        map.insert([i, i + 1, i + 2, i+ 3, i + 4, i + 5], i);
     }
     b.iter(move || ron::ser::to_string(&map).unwrap());
 }
