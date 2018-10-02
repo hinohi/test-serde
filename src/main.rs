@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate serde_derive;
 
+extern crate rmp_serde;
 extern crate ron;
 extern crate serde;
 extern crate serde_json;

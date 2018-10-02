@@ -1,9 +1,8 @@
 use std;
 use std::collections::HashMap;
 
+use rmp_serde;
 use ron;
-use serde;
-use serde_derive;
 use serde_json;
 use serde_pickle;
 use serde_yaml;
@@ -107,6 +106,23 @@ fn test_ron(p: &Point) {
     }
 }
 
+fn test_rmp(p: &Point) {
+    println!("rmp");
+    let s = rmp_serde::to_vec(p);
+    if s.is_err() {
+        println!("serialized\n{}", s.err().unwrap());
+        return;
+    }
+    let s = s.unwrap();
+    println!("serialized\n{:?}", s);
+    let d = rmp_serde::from_slice::<Point>(&s);
+    if d.is_ok() {
+        println!("deserialized\n{:?}", d.unwrap());
+    } else {
+        println!("deserialized\n{}", d.err().unwrap());
+    }
+}
+
 pub fn run() {
     let mut point = Point {
         x: 1,
@@ -128,4 +144,5 @@ pub fn run() {
     test_toml(&point);
     test_pickle(&point);
     test_ron(&point);
+    test_rmp(&point);
 }

@@ -77,6 +77,14 @@ dependencies = [
 
 [[package]]
 name = "num-traits"
+version = "0.1.43"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "num-traits"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
@@ -104,6 +112,25 @@ dependencies = [
  "fuchsia-zircon 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "libc 0.2.43 (registry+https://github.com/rust-lang/crates.io-index)",
  "winapi 0.3.6 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "rmp"
+version = "0.8.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "byteorder 1.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "num-traits 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "rmp-serde"
+version = "0.13.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "byteorder 1.2.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rmp 0.8.7 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.79 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -155,6 +182,7 @@ dependencies = [
 name = "serde-test"
 version = "0.1.0"
 dependencies = [
+ "rmp-serde 0.13.7 (registry+https://github.com/rust-lang/crates.io-index)",
  "ron 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde 1.0.79 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde-pickle 0.4.1 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -258,10 +286,13 @@ dependencies = [
 "checksum linked-hash-map 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)" = "70fb39025bc7cdd76305867c4eccf2f2dcf6e9a57f5b21a93e1c2d86cd03ec9e"
 "checksum num-bigint 0.1.44 (registry+https://github.com/rust-lang/crates.io-index)" = "e63899ad0da84ce718c14936262a41cee2c79c981fc0a0e7c7beb47d5a07e8c1"
 "checksum num-integer 0.1.39 (registry+https://github.com/rust-lang/crates.io-index)" = "e83d528d2677f0518c570baf2b7abdcf0cd2d248860b68507bdcb3e91d4c0cea"
+"checksum num-traits 0.1.43 (registry+https://github.com/rust-lang/crates.io-index)" = "92e5113e9fd4cc14ded8e499429f396a20f98c772a47cc8622a736e1ec843c31"
 "checksum num-traits 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "0b3a5d7cc97d6d30d8b9bc8fa19bf45349ffe46241e8816f50f62f6d6aaabee1"
 "checksum proc-macro2 0.4.19 (registry+https://github.com/rust-lang/crates.io-index)" = "ffe022fb8c8bd254524b0b3305906c1921fa37a84a644e29079a9e62200c3901"
 "checksum quote 0.6.8 (registry+https://github.com/rust-lang/crates.io-index)" = "dd636425967c33af890042c483632d33fa7a18f19ad1d7ea72e8998c6ef8dea5"
 "checksum rand 0.4.3 (registry+https://github.com/rust-lang/crates.io-index)" = "8356f47b32624fef5b3301c1be97e5944ecdd595409cc5da11d05f211db6cfbd"
+"checksum rmp 0.8.7 (registry+https://github.com/rust-lang/crates.io-index)" = "a3d45d7afc9b132b34a2479648863aa95c5c88e98b32285326a6ebadc80ec5c9"
+"checksum rmp-serde 0.13.7 (registry+https://github.com/rust-lang/crates.io-index)" = "011e1d58446e9fa3af7cdc1fb91295b10621d3ac4cb3a85cc86385ee9ca50cd3"
 "checksum ron 0.4.0 (registry+https://github.com/rust-lang/crates.io-index)" = "c48677d8a9247a4e0d1f3f9cb4b0a8e29167fdc3c04f383a5e669cd7a960ae0f"
 "checksum rustc-serialize 0.3.24 (registry+https://github.com/rust-lang/crates.io-index)" = "dcf128d1287d2ea9d80910b5f1120d0b8eede3fbf1abe91c40d39ea7d51e6fda"
 "checksum ryu 0.2.6 (registry+https://github.com/rust-lang/crates.io-index)" = "7153dd96dade874ab973e098cb62fcdbb89a03682e46b144fd09550998d4a4a7"
