@@ -9,11 +9,11 @@ extern crate serde;
 extern crate serde_json;
 extern crate serde_pickle;
 extern crate serde_yaml;
-extern crate toml;
 extern crate test;
+extern crate toml;
 
-mod val;
 mod pf;
+mod val;
 
 fn main() {
     pf::run();
